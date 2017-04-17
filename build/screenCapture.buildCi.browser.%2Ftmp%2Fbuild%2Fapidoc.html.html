@@ -1,0 +1,3304 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/lo1tuma/eslint-plugin-mocha">eslint-plugin-mocha (v4.9.0)</a>
+</h1>
+<h4>Eslint rules for mocha.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha">module eslint-plugin-mocha</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.handle-done-callback">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.handle-done-callback
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.max-top-level-suites">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.max-top-level-suites
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-exclusive-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-exclusive-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-global-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-global-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-hooks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks-for-single-case">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-hooks-for-single-case
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-identical-title">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-identical-title
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-mocha-arrows">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-mocha-arrows
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-nested-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-nested-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-pending-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-pending-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-return-and-callback">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-return-and-callback
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-sibling-hooks">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-sibling-hooks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-skipped-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-skipped-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-synchronous-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-synchronous-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-top-level-hooks">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-top-level-hooks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.valid-suite-description">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.valid-suite-description
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.valid-test-description">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.valid-test-description
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>configs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules">module eslint-plugin-mocha.rules</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.handle-done-callback">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>handle-done-callback
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.max-top-level-suites">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>max-top-level-suites
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-exclusive-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-exclusive-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-global-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-global-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-hooks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks-for-single-case">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-hooks-for-single-case
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-identical-title">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-identical-title
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-mocha-arrows">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-mocha-arrows
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-nested-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-nested-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-pending-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-pending-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-return-and-callback">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-return-and-callback
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-sibling-hooks">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-sibling-hooks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-skipped-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-skipped-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-synchronous-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-synchronous-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-top-level-hooks">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-top-level-hooks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.valid-suite-description">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>valid-suite-description
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.valid-test-description">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>valid-test-description
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.handle-done-callback">module eslint-plugin-mocha.rules.handle-done-callback</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.handle-done-callback.handle-done-callback">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>handle-done-callback
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.max-top-level-suites">module eslint-plugin-mocha.rules.max-top-level-suites</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.max-top-level-suites.max-top-level-suites">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>max-top-level-suites
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-exclusive-tests">module eslint-plugin-mocha.rules.no-exclusive-tests</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-exclusive-tests.no-exclusive-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-exclusive-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.no-exclusive-tests.</span>schema</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-global-tests">module eslint-plugin-mocha.rules.no-global-tests</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-global-tests.no-global-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-global-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-hooks">module eslint-plugin-mocha.rules.no-hooks</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks.no-hooks">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-hooks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-hooks-for-single-case">module eslint-plugin-mocha.rules.no-hooks-for-single-case</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks-for-single-case.no-hooks-for-single-case">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-hooks-for-single-case
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.no-hooks-for-single-case.</span>schema</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-identical-title">module eslint-plugin-mocha.rules.no-identical-title</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-identical-title.no-identical-title">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-identical-title
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-mocha-arrows">module eslint-plugin-mocha.rules.no-mocha-arrows</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-mocha-arrows.no-mocha-arrows">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-mocha-arrows
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-nested-tests">module eslint-plugin-mocha.rules.no-nested-tests</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-nested-tests.no-nested-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-nested-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-pending-tests">module eslint-plugin-mocha.rules.no-pending-tests</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-pending-tests.no-pending-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-pending-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-return-and-callback">module eslint-plugin-mocha.rules.no-return-and-callback</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-return-and-callback.no-return-and-callback">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-return-and-callback
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-sibling-hooks">module eslint-plugin-mocha.rules.no-sibling-hooks</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-sibling-hooks.no-sibling-hooks">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-sibling-hooks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-skipped-tests">module eslint-plugin-mocha.rules.no-skipped-tests</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-skipped-tests.no-skipped-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-skipped-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.no-skipped-tests.</span>schema</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-synchronous-tests">module eslint-plugin-mocha.rules.no-synchronous-tests</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-synchronous-tests.no-synchronous-tests">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-synchronous-tests
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.no-top-level-hooks">module eslint-plugin-mocha.rules.no-top-level-hooks</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.no-top-level-hooks.no-top-level-hooks">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-top-level-hooks
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.valid-suite-description">module eslint-plugin-mocha.rules.valid-suite-description</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.valid-suite-description.valid-suite-description">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>valid-suite-description
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-mocha.rules.valid-test-description">module eslint-plugin-mocha.rules.valid-test-description</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-mocha.rules.valid-test-description.valid-test-description">
+            function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>valid-test-description
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha" id="apidoc.module.eslint-plugin-mocha">module eslint-plugin-mocha</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.handle-done-callback" id="apidoc.element.eslint-plugin-mocha.rules.handle-done-callback">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.handle-done-callback
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.handle-done-callback = function (context) {
+    var possibleAsyncFunctionNames = [
+        'it',
+        'it.only',
+        'test',
+        'test.only',
+        'specify',
+        'specify.only',
+        'before',
+        'after',
+        'beforeEach',
+        'afterEach'
+    ];
+
+    function getCalleeName(callee) {
+        if (callee.type === 'MemberExpression') {
+             return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function hasParentMochaFunctionCall(functionExpression) {
+        var name;
+
+        if (functionExpression.parent &amp;&amp; functionExpression.parent.type === 'CallExpression') {
+            name = getCalleeName(functionExpression.parent.callee);
+            return possibleAsyncFunctionNames.indexOf(name) &gt; -1;
+        }
+
+        return false;
+    }
+
+    function isAsyncFunction(functionExpression) {
+        return functionExpression.params.length === 1;
+    }
+
+    function findParamInScope(paramName, scope) {
+        return R.find(function (variable) {
+            return variable.name === paramName &amp;&amp; variable.defs[0].type === 'Parameter';
+        }, scope.variables);
+    }
+
+    function isReferenceHandled(reference) {
+        var parent = context.getNodeByRangeIndex(reference.identifier.range[0]).parent;
+
+        return parent.type === 'CallExpression';
+    }
+
+    function hasHandledReferences(references) {
+        return references.some(isReferenceHandled);
+    }
+
+    function checkAsyncMochaFunction(functionExpression) {
+        var scope = context.getScope(),
+            callback = functionExpression.params[0],
+            callbackName = callback.name,
+            callbackVariable = findParamInScope(callbackName, scope);
+
+        if (callbackVariable &amp;&amp; !hasHandledReferences(callbackVariable.references)) {
+            context.report(callback, 'Expected "function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.handle-done-callback" callback to be handled.', { name: callbackName });
+        }
+    }
+
+    function check(node) {
+        if (hasParentMochaFunctionCall(node) &amp;&amp; isAsyncFunction(node)) {
+            checkAsyncMochaFunction(node);
+        }
+    }
+
+    return {
+        FunctionExpression: check,
+        ArrowFunctionExpression: check
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.max-top-level-suites" id="apidoc.element.eslint-plugin-mocha.rules.max-top-level-suites">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.max-top-level-suites
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.max-top-level-suites = function (context) {
+    var stack = [],
+        topLevelDescribes = [],
+        options = context.options[0] || {},
+        settings = context.settings,
+        suiteLimit;
+
+    if (R.isNil(options.limit)) {
+        suiteLimit = defaultSuiteLimit;
+    } else {
+        suiteLimit = options.limit;
+    }
+
+    return {
+        CallExpression: function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                stack.push(node);
+            }
+        },
+
+        'CallExpression:exit': function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                if (stack.length === 1) {
+                    topLevelDescribes.push(node);
+                }
+
+                stack.pop(node);
+            }
+        },
+
+        'Program:exit': function () {
+            if (topLevelDescribes.length &gt; suiteLimit) {
+                context.report({
+                    node: topLevelDescribes[suiteLimit],
+                    message: 'The number of top-level suites is more than ' + suiteLimit + '.'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-exclusive-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-exclusive-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-exclusive-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-exclusive-tests = function (context) {
+    var mochaTestFunctions = [
+            'it',
+            'describe',
+            'suite',
+            'test',
+            'context',
+            'specify'
+        ],
+        settings = context.settings,
+        additionalTestFunctions = getAdditionalTestFunctions(settings);
+
+    mochaTestFunctions = mochaTestFunctions.concat(additionalTestFunctions);
+
+    function matchesMochaTestFunction(object) {
+        var name = astUtils.getNodeName(object);
+
+        return mochaTestFunctions.indexOf(name) !== -1;
+    }
+
+    function isPropertyNamedOnly(property) {
+        return property &amp;&amp; astUtils.getPropertyName(property) === 'only';
+    }
+
+    function isCallToMochasOnlyFunction(callee) {
+        return callee.type === 'MemberExpression' &amp;&amp;
+            matchesMochaTestFunction(callee.object) &amp;&amp;
+            isPropertyNamedOnly(callee.property);
+    }
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee;
+
+            if (callee &amp;&amp; isCallToMochasOnlyFunction(callee)) {
+                context.report({
+                    node: callee.property,
+                    message: 'Unexpected exclusive mocha test.'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-global-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-global-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-global-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-global-tests = function (context) {
+    var testFunctionNames = [
+            'it',
+            'it.only',
+            'it.skip',
+            'test',
+            'test.only',
+            'test.skip',
+            'specify',
+            'specify.only',
+            'specify.skip'
+        ];
+
+    function getFnName(callee) {
+        if (callee.type === 'MemberExpression') {
+            if (callee.computed) {
+                return callee.object.name + '.' + callee.property.value;
+            }
+
+            return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function isGlobalScope(scope) {
+        return scope.type === 'global' || scope.type === 'module';
+    }
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee,
+                fnName = getFnName(callee),
+                scope = context.getScope();
+
+            if (testFunctionNames.indexOf(fnName) !== -1 &amp;&amp; isGlobalScope(scope)) {
+                context.report(callee, 'Unexpected global mocha test.');
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks" id="apidoc.element.eslint-plugin-mocha.rules.no-hooks">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-hooks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-hooks = function (context) {
+    return {
+        CallExpression: function (node) {
+            if (astUtil.isHookIdentifier(node.callee)) {
+                context.report({
+                    node: node.callee,
+                    message: 'Unexpected use of Mocha `' + node.callee.name + '` hook'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks-for-single-case" id="apidoc.element.eslint-plugin-mocha.rules.no-hooks-for-single-case">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-hooks-for-single-case
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-hooks-for-single-case = function (context) {
+    var options = context.options[0] || {},
+        allowedHooks = options.allow || [],
+        settings = context.settings,
+        layers = [];
+
+    function popLayer(node) {
+        var layer = layers[layers.length - 1];
+        if (layer.describeNode === node) {
+            if (layer.testCount &lt;= 1) {
+                layer.hookNodes
+                    .filter(function (hookNode) {
+                        return allowedHooks.indexOf(hookNode.name) === -1;
+                    })
+                    .forEach(function (hookNode) {
+                        context.report({
+                            node: hookNode,
+                            message: 'Unexpected use of Mocha `' + hookNode.name + '` hook for a single test case'
+                        });
+                    });
+            }
+            layers.pop();
+        }
+    }
+
+    return {
+        Program: function (node) {
+            layers.push(newDescribeLayer(node));
+        },
+
+        CallExpression: function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                layers[layers.length - 1].testCount += 1;
+                layers.push(newDescribeLayer(node));
+                return;
+            }
+
+            if (astUtil.isTestCase(node)) {
+                layers[layers.length - 1].testCount += 1;
+            }
+
+            if (astUtil.isHookIdentifier(node.callee)) {
+                layers[layers.length - 1].hookNodes.push(node.callee);
+            }
+        },
+
+        'CallExpression:exit': popLayer,
+        'Program:exit': popLayer
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-identical-title" id="apidoc.element.eslint-plugin-mocha.rules.no-identical-title">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-identical-title
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-identical-title = function (context) {
+    var titleLayers = [
+        newLayer()
+    ],
+    settings = context.settings;
+
+    return {
+        CallExpression: function (node) {
+            var currentLayer = titleLayers[titleLayers.length - 1],
+                title;
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                titleLayers.push(newLayer());
+            }
+            if (!isFirstArgLiteral(node)) {
+                return;
+            }
+
+            title = node.arguments[0].value;
+            handlTestCaseTitles(context, currentLayer.testTitles, node, title);
+            handlTestSuiteTitles(context, currentLayer.describeTitles, node, title);
+        },
+        'CallExpression:exit': function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                titleLayers.pop();
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-mocha-arrows" id="apidoc.element.eslint-plugin-mocha.rules.no-mocha-arrows">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-mocha-arrows
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-mocha-arrows = function (context) {
+    function getCalleeName(callee) {
+        if (callee.type === 'MemberExpression') {
+             return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function isLikelyMochaGlobal(scope, name) {
+        return !R.find(R.propEq('name', name), scope.variables);
+    }
+
+    function fixArrowFunction(fixer, fn) {
+        var sourceCode = context.getSourceCode(),
+            paramsLeftParen = sourceCode.getFirstToken(fn),
+            paramsRightParen = sourceCode.getTokenBefore(sourceCode.getTokenBefore(fn.body)),
+            paramsFullText =
+                sourceCode.text.slice(paramsLeftParen.range[0], paramsRightParen.range[1]),
+            functionKeyword = 'function',
+            bodyText;
+
+        if (fn.async) {
+            // When 'async' specified, take care about the keyword.
+            functionKeyword = 'async function';
+            // Strip 'async (...)' to ' (...)'
+            paramsFullText = paramsFullText.slice(5);
+        }
+
+        if (fn.params.length &gt; 0) {
+            paramsFullText = '(' + sourceCode.text.slice(fn.params[0].start, R.last(fn.params).end) + ')';
+        }
+
+        if (fn.body.type === 'BlockStatement') {
+            // When it((...) =&gt; { ... }),
+            // simply replace '(...) =&gt; ' with 'function () '
+            return fixer.replaceTextRange(
+                [ fn.start, fn.body.start ],
+                functionKeyword + paramsFullText + ' '
+            );
+        }
+
+        bodyText = sourceCode.text.slice(fn.body.range[0], fn.body.range[1]);
+        return fixer.replaceTextRange(
+            [ fn.start, fn.end ],
+            functionKeyword + paramsFullText + ' { return ' + bodyText + '; }'
+        );
+    }
+
+    return {
+        CallExpression: function (node) {
+            var name = getCalleeName(node.callee),
+                fnArg;
+
+            if (name &amp;&amp; mochaFunctionNames.indexOf(name) &gt; -1) {
+                fnArg = node.arguments.slice(-1)[0];
+                if (fnArg &amp;&amp; fnArg.type === 'ArrowFunctionExpression') {
+                    if (isLikelyMochaGlobal(context.getScope(), name)) {
+                        context.report({
+                            node: node,
+                            message: 'Do not pass arrow functions to ' + name + '()',
+                            fix: function (fixer) {
+                                return fixArrowFunction(fixer, fnArg);
+                            }
+                        });
+                    }
+                }
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-nested-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-nested-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-nested-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noNestedTests(context) {
+    var testNestingLevel = 0,
+        settings = context.settings;
+
+    function report(callExpression, isTestCase) {
+        var message = isTestCase ? 'Unexpected test nested within another test.' :
+            'Unexpected suite nested within a test.';
+
+        context.report({
+            message: message,
+            node: callExpression.callee
+        });
+    }
+
+    return {
+        CallExpression: function (node) {
+            var isTestCase = astUtils.isTestCase(node),
+                isDescribe = astUtils.isDescribe(node, additionalSuiteNames(settings));
+
+            if (testNestingLevel &gt; 0 &amp;&amp; (isTestCase || isDescribe)) {
+                report(node, isTestCase);
+            }
+
+            if (isTestCase) {
+                testNestingLevel += 1;
+            }
+        },
+
+        'CallExpression:exit': function (node) {
+            if (astUtils.isTestCase(node)) {
+                testNestingLevel -= 1;
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-pending-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-pending-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-pending-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-pending-tests = function (context) {
+    var mochaTestFunctionNames = [
+        'it',
+        'test',
+        'specify'
+    ];
+
+    function isMochaTest(callee) {
+        return callee.type === 'Identifier' &amp;&amp;
+            mochaTestFunctionNames.indexOf(callee.name) !== -1;
+    }
+
+    function isPendingMochaTest(node) {
+        return isMochaTest(node.callee) &amp;&amp;
+            node.arguments.length === 1 &amp;&amp;
+            node.arguments[0].type === 'Literal';
+    }
+
+    return {
+        CallExpression: function (node) {
+            if (node.callee &amp;&amp; isPendingMochaTest(node)) {
+                context.report({
+                    node: node,
+                    message: 'Unexpected pending mocha test.'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-return-and-callback" id="apidoc.element.eslint-plugin-mocha.rules.no-return-and-callback">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-return-and-callback
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-return-and-callback = function (context) {
+    function check(node) {
+        if (node.params.length === 0 || !hasParentMochaFunctionCall(node)) {
+            return;
+        }
+
+        if (!reportIfShortArrowFunction(context, node)) {
+            reportIfFunctionWithBlock(context, node, node.params[0].name);
+        }
+    }
+
+    return {
+        FunctionExpression: check,
+        ArrowFunctionExpression: check
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-sibling-hooks" id="apidoc.element.eslint-plugin-mocha.rules.no-sibling-hooks">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-sibling-hooks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-sibling-hooks = function (context) {
+    var isUsed = [],
+        settings = context.settings;
+
+    return {
+        Program: function (node) {
+            isUsed.push(newDescribeLayer(node));
+        },
+
+        CallExpression: function (node) {
+            var name = node.callee &amp;&amp; node.callee.name;
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+              isUsed.push(newDescribeLayer(node));
+              return;
+            }
+
+            if (!astUtil.isHookIdentifier(node.callee)) {
+              return;
+            }
+
+            if (isUsed[isUsed.length - 1][name]) {
+                context.report({
+                    node: node.callee,
+                    message: 'Unexpected use of duplicate Mocha `' + name + '` hook'
+                });
+            }
+
+            isUsed[isUsed.length - 1][name] = true;
+        },
+
+        'CallExpression:exit': function (node) {
+            if (isUsed[isUsed.length - 1].describeNode === node) {
+              isUsed.pop();
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-skipped-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-skipped-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-skipped-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-skipped-tests = function (context) {
+    var settings = context.settings,
+        additionalTestFunctions = getAdditionalTestFunctions(settings),
+        additionalXFunctions = getAdditionalXFunctions(settings);
+
+    mochaTestFunctions = [
+        'it',
+        'describe',
+        'suite',
+        'test',
+        'context',
+        'specify'
+    ].concat(additionalTestFunctions);
+    mochaXFunctions = [
+        'xit',
+        'xdescribe',
+        'xcontext',
+        'xspecify'
+    ].concat(additionalXFunctions);
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee;
+
+            if (callee &amp;&amp; isCallToMochasSkipFunction(callee)) {
+                context.report({
+                    node: callee.property,
+                    message: 'Unexpected skipped mocha test.',
+                    fix: createSkipAutofixFunction(callee)
+                });
+            } else if (callee &amp;&amp; isCallToMochaXFunction(callee)) {
+                context.report({
+                    node: callee,
+                    message: 'Unexpected skipped mocha test.',
+                    fix: createXAutofixFunction(callee)
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-synchronous-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-synchronous-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-synchronous-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-synchronous-tests = function (context) {
+    var possibleAsyncFunctionNames = [
+        'it',
+        'it.only',
+        'test',
+        'test.only',
+        'specify',
+        'specify.only',
+        'before',
+        'after',
+        'beforeEach',
+        'afterEach'
+    ];
+
+    function getCalleeName(callee) {
+        if (callee.type === 'MemberExpression') {
+             return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function hasParentMochaFunctionCall(functionExpression) {
+        var name;
+
+        if (functionExpression.parent &amp;&amp; functionExpression.parent.type === 'CallExpression') {
+            name = getCalleeName(functionExpression.parent.callee);
+            return possibleAsyncFunctionNames.indexOf(name) &gt; -1;
+        }
+
+        return false;
+    }
+
+    function hasAsyncCallback(functionExpression) {
+        return functionExpression.params.length === 1;
+    }
+
+    function findPromiseReturnStatement(nodes) {
+      return R.find(function (node) {
+        return node.type === 'ReturnStatement' &amp;&amp; node.argument &amp;&amp; node.argument.type !== 'Literal';
+      }, nodes);
+    }
+
+    function checkPromiseReturn(functionExpression) {
+        var bodyStatement = functionExpression.body,
+            returnStatement = null;
+
+        if (bodyStatement.type === 'BlockStatement') {
+            returnStatement = findPromiseReturnStatement(functionExpression.body.body);
+        } else if (bodyStatement.type === 'CallExpression') {
+            //  allow arrow statements calling a promise with implicit return.
+            returnStatement = bodyStatement;
+        }
+
+        if (!returnStatement) {
+            context.report(functionExpression, 'Unexpected synchronous test.');
+        }
+    }
+
+    function check(node) {
+        if (hasParentMochaFunctionCall(node) &amp;&amp; !hasAsyncCallback(node)) {
+            checkPromiseReturn(node);
+        }
+    }
+
+    return {
+        FunctionExpression: check,
+        ArrowFunctionExpression: check
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-top-level-hooks" id="apidoc.element.eslint-plugin-mocha.rules.no-top-level-hooks">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.no-top-level-hooks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.no-top-level-hooks = function (context) {
+    var settings = context.settings,
+        testSuiteStack = [];
+
+    return {
+        CallExpression: function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                testSuiteStack.push(node);
+                return;
+            }
+
+            if (!astUtil.isHookIdentifier(node.callee)) {
+              return;
+            }
+
+            if (testSuiteStack.length === 0) {
+                context.report({
+                    node: node.callee,
+                    message: 'Unexpected use of Mocha `' + node.callee.name + '` hook outside of a test suite'
+                });
+            }
+        },
+
+        'CallExpression:exit': function (node) {
+            if (testSuiteStack[testSuiteStack.length - 1] === node) {
+                testSuiteStack.pop();
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.valid-suite-description" id="apidoc.element.eslint-plugin-mocha.rules.valid-suite-description">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.valid-suite-description
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.valid-suite-description = function (context) {
+    var pattern = new RegExp(context.options[0]),
+        suiteNames = context.options[1] ? context.options[1] : defaultSuiteNames;
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee,
+                args;
+
+            if (callee &amp;&amp; callee.name &amp;&amp; suiteNames.indexOf(callee.name) &gt; -1) {
+                args = node.arguments;
+                if (args &amp;&amp; args[0] &amp;&amp; typeof args[0].value === 'string' &amp;&amp; !pattern.test(args[0].value)) {
+                    context.report(node, 'Invalid "' + callee.name + '()" description found.');
+                }
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.valid-test-description" id="apidoc.element.eslint-plugin-mocha.rules.valid-test-description">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.</span>rules.valid-test-description
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rules.valid-test-description = function (context) {
+    var pattern = context.options[0] ? new RegExp(context.options[0]) : /^should/,
+        testNames = context.options[1] ? context.options[1] : defaultTestNames;
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee,
+                args;
+
+            if (callee &amp;&amp; callee.name &amp;&amp; testNames.indexOf(callee.name) &gt; -1) {
+                args = node.arguments;
+                if (args &amp;&amp; args[0] &amp;&amp; typeof args[0].value === 'string' &amp;&amp; !pattern.test(args[0].value)) {
+                    context.report(node, 'Invalid "' + callee.name + '()" description found.');
+                }
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules" id="apidoc.module.eslint-plugin-mocha.rules">module eslint-plugin-mocha.rules</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.handle-done-callback" id="apidoc.element.eslint-plugin-mocha.rules.handle-done-callback">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>handle-done-callback
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handle-done-callback = function (context) {
+    var possibleAsyncFunctionNames = [
+        'it',
+        'it.only',
+        'test',
+        'test.only',
+        'specify',
+        'specify.only',
+        'before',
+        'after',
+        'beforeEach',
+        'afterEach'
+    ];
+
+    function getCalleeName(callee) {
+        if (callee.type === 'MemberExpression') {
+             return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function hasParentMochaFunctionCall(functionExpression) {
+        var name;
+
+        if (functionExpression.parent &amp;&amp; functionExpression.parent.type === 'CallExpression') {
+            name = getCalleeName(functionExpression.parent.callee);
+            return possibleAsyncFunctionNames.indexOf(name) &gt; -1;
+        }
+
+        return false;
+    }
+
+    function isAsyncFunction(functionExpression) {
+        return functionExpression.params.length === 1;
+    }
+
+    function findParamInScope(paramName, scope) {
+        return R.find(function (variable) {
+            return variable.name === paramName &amp;&amp; variable.defs[0].type === 'Parameter';
+        }, scope.variables);
+    }
+
+    function isReferenceHandled(reference) {
+        var parent = context.getNodeByRangeIndex(reference.identifier.range[0]).parent;
+
+        return parent.type === 'CallExpression';
+    }
+
+    function hasHandledReferences(references) {
+        return references.some(isReferenceHandled);
+    }
+
+    function checkAsyncMochaFunction(functionExpression) {
+        var scope = context.getScope(),
+            callback = functionExpression.params[0],
+            callbackName = callback.name,
+            callbackVariable = findParamInScope(callbackName, scope);
+
+        if (callbackVariable &amp;&amp; !hasHandledReferences(callbackVariable.references)) {
+            context.report(callback, 'Expected "function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>handle-done-callback" callback to be handled.', { name: callbackName });
+        }
+    }
+
+    function check(node) {
+        if (hasParentMochaFunctionCall(node) &amp;&amp; isAsyncFunction(node)) {
+            checkAsyncMochaFunction(node);
+        }
+    }
+
+    return {
+        FunctionExpression: check,
+        ArrowFunctionExpression: check
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.max-top-level-suites" id="apidoc.element.eslint-plugin-mocha.rules.max-top-level-suites">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>max-top-level-suites
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">max-top-level-suites = function (context) {
+    var stack = [],
+        topLevelDescribes = [],
+        options = context.options[0] || {},
+        settings = context.settings,
+        suiteLimit;
+
+    if (R.isNil(options.limit)) {
+        suiteLimit = defaultSuiteLimit;
+    } else {
+        suiteLimit = options.limit;
+    }
+
+    return {
+        CallExpression: function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                stack.push(node);
+            }
+        },
+
+        'CallExpression:exit': function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                if (stack.length === 1) {
+                    topLevelDescribes.push(node);
+                }
+
+                stack.pop(node);
+            }
+        },
+
+        'Program:exit': function () {
+            if (topLevelDescribes.length &gt; suiteLimit) {
+                context.report({
+                    node: topLevelDescribes[suiteLimit],
+                    message: 'The number of top-level suites is more than ' + suiteLimit + '.'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-exclusive-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-exclusive-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-exclusive-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-exclusive-tests = function (context) {
+    var mochaTestFunctions = [
+            'it',
+            'describe',
+            'suite',
+            'test',
+            'context',
+            'specify'
+        ],
+        settings = context.settings,
+        additionalTestFunctions = getAdditionalTestFunctions(settings);
+
+    mochaTestFunctions = mochaTestFunctions.concat(additionalTestFunctions);
+
+    function matchesMochaTestFunction(object) {
+        var name = astUtils.getNodeName(object);
+
+        return mochaTestFunctions.indexOf(name) !== -1;
+    }
+
+    function isPropertyNamedOnly(property) {
+        return property &amp;&amp; astUtils.getPropertyName(property) === 'only';
+    }
+
+    function isCallToMochasOnlyFunction(callee) {
+        return callee.type === 'MemberExpression' &amp;&amp;
+            matchesMochaTestFunction(callee.object) &amp;&amp;
+            isPropertyNamedOnly(callee.property);
+    }
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee;
+
+            if (callee &amp;&amp; isCallToMochasOnlyFunction(callee)) {
+                context.report({
+                    node: callee.property,
+                    message: 'Unexpected exclusive mocha test.'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-global-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-global-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-global-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-global-tests = function (context) {
+    var testFunctionNames = [
+            'it',
+            'it.only',
+            'it.skip',
+            'test',
+            'test.only',
+            'test.skip',
+            'specify',
+            'specify.only',
+            'specify.skip'
+        ];
+
+    function getFnName(callee) {
+        if (callee.type === 'MemberExpression') {
+            if (callee.computed) {
+                return callee.object.name + '.' + callee.property.value;
+            }
+
+            return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function isGlobalScope(scope) {
+        return scope.type === 'global' || scope.type === 'module';
+    }
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee,
+                fnName = getFnName(callee),
+                scope = context.getScope();
+
+            if (testFunctionNames.indexOf(fnName) !== -1 &amp;&amp; isGlobalScope(scope)) {
+                context.report(callee, 'Unexpected global mocha test.');
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks" id="apidoc.element.eslint-plugin-mocha.rules.no-hooks">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-hooks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-hooks = function (context) {
+    return {
+        CallExpression: function (node) {
+            if (astUtil.isHookIdentifier(node.callee)) {
+                context.report({
+                    node: node.callee,
+                    message: 'Unexpected use of Mocha `' + node.callee.name + '` hook'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks-for-single-case" id="apidoc.element.eslint-plugin-mocha.rules.no-hooks-for-single-case">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-hooks-for-single-case
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-hooks-for-single-case = function (context) {
+    var options = context.options[0] || {},
+        allowedHooks = options.allow || [],
+        settings = context.settings,
+        layers = [];
+
+    function popLayer(node) {
+        var layer = layers[layers.length - 1];
+        if (layer.describeNode === node) {
+            if (layer.testCount &lt;= 1) {
+                layer.hookNodes
+                    .filter(function (hookNode) {
+                        return allowedHooks.indexOf(hookNode.name) === -1;
+                    })
+                    .forEach(function (hookNode) {
+                        context.report({
+                            node: hookNode,
+                            message: 'Unexpected use of Mocha `' + hookNode.name + '` hook for a single test case'
+                        });
+                    });
+            }
+            layers.pop();
+        }
+    }
+
+    return {
+        Program: function (node) {
+            layers.push(newDescribeLayer(node));
+        },
+
+        CallExpression: function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                layers[layers.length - 1].testCount += 1;
+                layers.push(newDescribeLayer(node));
+                return;
+            }
+
+            if (astUtil.isTestCase(node)) {
+                layers[layers.length - 1].testCount += 1;
+            }
+
+            if (astUtil.isHookIdentifier(node.callee)) {
+                layers[layers.length - 1].hookNodes.push(node.callee);
+            }
+        },
+
+        'CallExpression:exit': popLayer,
+        'Program:exit': popLayer
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-identical-title" id="apidoc.element.eslint-plugin-mocha.rules.no-identical-title">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-identical-title
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-identical-title = function (context) {
+    var titleLayers = [
+        newLayer()
+    ],
+    settings = context.settings;
+
+    return {
+        CallExpression: function (node) {
+            var currentLayer = titleLayers[titleLayers.length - 1],
+                title;
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                titleLayers.push(newLayer());
+            }
+            if (!isFirstArgLiteral(node)) {
+                return;
+            }
+
+            title = node.arguments[0].value;
+            handlTestCaseTitles(context, currentLayer.testTitles, node, title);
+            handlTestSuiteTitles(context, currentLayer.describeTitles, node, title);
+        },
+        'CallExpression:exit': function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                titleLayers.pop();
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-mocha-arrows" id="apidoc.element.eslint-plugin-mocha.rules.no-mocha-arrows">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-mocha-arrows
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-mocha-arrows = function (context) {
+    function getCalleeName(callee) {
+        if (callee.type === 'MemberExpression') {
+             return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function isLikelyMochaGlobal(scope, name) {
+        return !R.find(R.propEq('name', name), scope.variables);
+    }
+
+    function fixArrowFunction(fixer, fn) {
+        var sourceCode = context.getSourceCode(),
+            paramsLeftParen = sourceCode.getFirstToken(fn),
+            paramsRightParen = sourceCode.getTokenBefore(sourceCode.getTokenBefore(fn.body)),
+            paramsFullText =
+                sourceCode.text.slice(paramsLeftParen.range[0], paramsRightParen.range[1]),
+            functionKeyword = 'function',
+            bodyText;
+
+        if (fn.async) {
+            // When 'async' specified, take care about the keyword.
+            functionKeyword = 'async function';
+            // Strip 'async (...)' to ' (...)'
+            paramsFullText = paramsFullText.slice(5);
+        }
+
+        if (fn.params.length &gt; 0) {
+            paramsFullText = '(' + sourceCode.text.slice(fn.params[0].start, R.last(fn.params).end) + ')';
+        }
+
+        if (fn.body.type === 'BlockStatement') {
+            // When it((...) =&gt; { ... }),
+            // simply replace '(...) =&gt; ' with 'function () '
+            return fixer.replaceTextRange(
+                [ fn.start, fn.body.start ],
+                functionKeyword + paramsFullText + ' '
+            );
+        }
+
+        bodyText = sourceCode.text.slice(fn.body.range[0], fn.body.range[1]);
+        return fixer.replaceTextRange(
+            [ fn.start, fn.end ],
+            functionKeyword + paramsFullText + ' { return ' + bodyText + '; }'
+        );
+    }
+
+    return {
+        CallExpression: function (node) {
+            var name = getCalleeName(node.callee),
+                fnArg;
+
+            if (name &amp;&amp; mochaFunctionNames.indexOf(name) &gt; -1) {
+                fnArg = node.arguments.slice(-1)[0];
+                if (fnArg &amp;&amp; fnArg.type === 'ArrowFunctionExpression') {
+                    if (isLikelyMochaGlobal(context.getScope(), name)) {
+                        context.report({
+                            node: node,
+                            message: 'Do not pass arrow functions to ' + name + '()',
+                            fix: function (fixer) {
+                                return fixArrowFunction(fixer, fnArg);
+                            }
+                        });
+                    }
+                }
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-nested-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-nested-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-nested-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noNestedTests(context) {
+    var testNestingLevel = 0,
+        settings = context.settings;
+
+    function report(callExpression, isTestCase) {
+        var message = isTestCase ? 'Unexpected test nested within another test.' :
+            'Unexpected suite nested within a test.';
+
+        context.report({
+            message: message,
+            node: callExpression.callee
+        });
+    }
+
+    return {
+        CallExpression: function (node) {
+            var isTestCase = astUtils.isTestCase(node),
+                isDescribe = astUtils.isDescribe(node, additionalSuiteNames(settings));
+
+            if (testNestingLevel &gt; 0 &amp;&amp; (isTestCase || isDescribe)) {
+                report(node, isTestCase);
+            }
+
+            if (isTestCase) {
+                testNestingLevel += 1;
+            }
+        },
+
+        'CallExpression:exit': function (node) {
+            if (astUtils.isTestCase(node)) {
+                testNestingLevel -= 1;
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-pending-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-pending-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-pending-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-pending-tests = function (context) {
+    var mochaTestFunctionNames = [
+        'it',
+        'test',
+        'specify'
+    ];
+
+    function isMochaTest(callee) {
+        return callee.type === 'Identifier' &amp;&amp;
+            mochaTestFunctionNames.indexOf(callee.name) !== -1;
+    }
+
+    function isPendingMochaTest(node) {
+        return isMochaTest(node.callee) &amp;&amp;
+            node.arguments.length === 1 &amp;&amp;
+            node.arguments[0].type === 'Literal';
+    }
+
+    return {
+        CallExpression: function (node) {
+            if (node.callee &amp;&amp; isPendingMochaTest(node)) {
+                context.report({
+                    node: node,
+                    message: 'Unexpected pending mocha test.'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-return-and-callback" id="apidoc.element.eslint-plugin-mocha.rules.no-return-and-callback">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-return-and-callback
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-return-and-callback = function (context) {
+    function check(node) {
+        if (node.params.length === 0 || !hasParentMochaFunctionCall(node)) {
+            return;
+        }
+
+        if (!reportIfShortArrowFunction(context, node)) {
+            reportIfFunctionWithBlock(context, node, node.params[0].name);
+        }
+    }
+
+    return {
+        FunctionExpression: check,
+        ArrowFunctionExpression: check
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-sibling-hooks" id="apidoc.element.eslint-plugin-mocha.rules.no-sibling-hooks">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-sibling-hooks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-sibling-hooks = function (context) {
+    var isUsed = [],
+        settings = context.settings;
+
+    return {
+        Program: function (node) {
+            isUsed.push(newDescribeLayer(node));
+        },
+
+        CallExpression: function (node) {
+            var name = node.callee &amp;&amp; node.callee.name;
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+              isUsed.push(newDescribeLayer(node));
+              return;
+            }
+
+            if (!astUtil.isHookIdentifier(node.callee)) {
+              return;
+            }
+
+            if (isUsed[isUsed.length - 1][name]) {
+                context.report({
+                    node: node.callee,
+                    message: 'Unexpected use of duplicate Mocha `' + name + '` hook'
+                });
+            }
+
+            isUsed[isUsed.length - 1][name] = true;
+        },
+
+        'CallExpression:exit': function (node) {
+            if (isUsed[isUsed.length - 1].describeNode === node) {
+              isUsed.pop();
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-skipped-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-skipped-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-skipped-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-skipped-tests = function (context) {
+    var settings = context.settings,
+        additionalTestFunctions = getAdditionalTestFunctions(settings),
+        additionalXFunctions = getAdditionalXFunctions(settings);
+
+    mochaTestFunctions = [
+        'it',
+        'describe',
+        'suite',
+        'test',
+        'context',
+        'specify'
+    ].concat(additionalTestFunctions);
+    mochaXFunctions = [
+        'xit',
+        'xdescribe',
+        'xcontext',
+        'xspecify'
+    ].concat(additionalXFunctions);
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee;
+
+            if (callee &amp;&amp; isCallToMochasSkipFunction(callee)) {
+                context.report({
+                    node: callee.property,
+                    message: 'Unexpected skipped mocha test.',
+                    fix: createSkipAutofixFunction(callee)
+                });
+            } else if (callee &amp;&amp; isCallToMochaXFunction(callee)) {
+                context.report({
+                    node: callee,
+                    message: 'Unexpected skipped mocha test.',
+                    fix: createXAutofixFunction(callee)
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-synchronous-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-synchronous-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-synchronous-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-synchronous-tests = function (context) {
+    var possibleAsyncFunctionNames = [
+        'it',
+        'it.only',
+        'test',
+        'test.only',
+        'specify',
+        'specify.only',
+        'before',
+        'after',
+        'beforeEach',
+        'afterEach'
+    ];
+
+    function getCalleeName(callee) {
+        if (callee.type === 'MemberExpression') {
+             return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function hasParentMochaFunctionCall(functionExpression) {
+        var name;
+
+        if (functionExpression.parent &amp;&amp; functionExpression.parent.type === 'CallExpression') {
+            name = getCalleeName(functionExpression.parent.callee);
+            return possibleAsyncFunctionNames.indexOf(name) &gt; -1;
+        }
+
+        return false;
+    }
+
+    function hasAsyncCallback(functionExpression) {
+        return functionExpression.params.length === 1;
+    }
+
+    function findPromiseReturnStatement(nodes) {
+      return R.find(function (node) {
+        return node.type === 'ReturnStatement' &amp;&amp; node.argument &amp;&amp; node.argument.type !== 'Literal';
+      }, nodes);
+    }
+
+    function checkPromiseReturn(functionExpression) {
+        var bodyStatement = functionExpression.body,
+            returnStatement = null;
+
+        if (bodyStatement.type === 'BlockStatement') {
+            returnStatement = findPromiseReturnStatement(functionExpression.body.body);
+        } else if (bodyStatement.type === 'CallExpression') {
+            //  allow arrow statements calling a promise with implicit return.
+            returnStatement = bodyStatement;
+        }
+
+        if (!returnStatement) {
+            context.report(functionExpression, 'Unexpected synchronous test.');
+        }
+    }
+
+    function check(node) {
+        if (hasParentMochaFunctionCall(node) &amp;&amp; !hasAsyncCallback(node)) {
+            checkPromiseReturn(node);
+        }
+    }
+
+    return {
+        FunctionExpression: check,
+        ArrowFunctionExpression: check
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-top-level-hooks" id="apidoc.element.eslint-plugin-mocha.rules.no-top-level-hooks">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-top-level-hooks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-top-level-hooks = function (context) {
+    var settings = context.settings,
+        testSuiteStack = [];
+
+    return {
+        CallExpression: function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                testSuiteStack.push(node);
+                return;
+            }
+
+            if (!astUtil.isHookIdentifier(node.callee)) {
+              return;
+            }
+
+            if (testSuiteStack.length === 0) {
+                context.report({
+                    node: node.callee,
+                    message: 'Unexpected use of Mocha `' + node.callee.name + '` hook outside of a test suite'
+                });
+            }
+        },
+
+        'CallExpression:exit': function (node) {
+            if (testSuiteStack[testSuiteStack.length - 1] === node) {
+                testSuiteStack.pop();
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.valid-suite-description" id="apidoc.element.eslint-plugin-mocha.rules.valid-suite-description">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>valid-suite-description
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">valid-suite-description = function (context) {
+    var pattern = new RegExp(context.options[0]),
+        suiteNames = context.options[1] ? context.options[1] : defaultSuiteNames;
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee,
+                args;
+
+            if (callee &amp;&amp; callee.name &amp;&amp; suiteNames.indexOf(callee.name) &gt; -1) {
+                args = node.arguments;
+                if (args &amp;&amp; args[0] &amp;&amp; typeof args[0].value === 'string' &amp;&amp; !pattern.test(args[0].value)) {
+                    context.report(node, 'Invalid "' + callee.name + '()" description found.');
+                }
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.valid-test-description" id="apidoc.element.eslint-plugin-mocha.rules.valid-test-description">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>valid-test-description
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">valid-test-description = function (context) {
+    var pattern = context.options[0] ? new RegExp(context.options[0]) : /^should/,
+        testNames = context.options[1] ? context.options[1] : defaultTestNames;
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee,
+                args;
+
+            if (callee &amp;&amp; callee.name &amp;&amp; testNames.indexOf(callee.name) &gt; -1) {
+                args = node.arguments;
+                if (args &amp;&amp; args[0] &amp;&amp; typeof args[0].value === 'string' &amp;&amp; !pattern.test(args[0].value)) {
+                    context.report(node, 'Invalid "' + callee.name + '()" description found.');
+                }
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.handle-done-callback" id="apidoc.module.eslint-plugin-mocha.rules.handle-done-callback">module eslint-plugin-mocha.rules.handle-done-callback</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.handle-done-callback.handle-done-callback" id="apidoc.element.eslint-plugin-mocha.rules.handle-done-callback.handle-done-callback">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>handle-done-callback
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handle-done-callback = function (context) {
+    var possibleAsyncFunctionNames = [
+        'it',
+        'it.only',
+        'test',
+        'test.only',
+        'specify',
+        'specify.only',
+        'before',
+        'after',
+        'beforeEach',
+        'afterEach'
+    ];
+
+    function getCalleeName(callee) {
+        if (callee.type === 'MemberExpression') {
+             return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function hasParentMochaFunctionCall(functionExpression) {
+        var name;
+
+        if (functionExpression.parent &amp;&amp; functionExpression.parent.type === 'CallExpression') {
+            name = getCalleeName(functionExpression.parent.callee);
+            return possibleAsyncFunctionNames.indexOf(name) &gt; -1;
+        }
+
+        return false;
+    }
+
+    function isAsyncFunction(functionExpression) {
+        return functionExpression.params.length === 1;
+    }
+
+    function findParamInScope(paramName, scope) {
+        return R.find(function (variable) {
+            return variable.name === paramName &amp;&amp; variable.defs[0].type === 'Parameter';
+        }, scope.variables);
+    }
+
+    function isReferenceHandled(reference) {
+        var parent = context.getNodeByRangeIndex(reference.identifier.range[0]).parent;
+
+        return parent.type === 'CallExpression';
+    }
+
+    function hasHandledReferences(references) {
+        return references.some(isReferenceHandled);
+    }
+
+    function checkAsyncMochaFunction(functionExpression) {
+        var scope = context.getScope(),
+            callback = functionExpression.params[0],
+            callbackName = callback.name,
+            callbackVariable = findParamInScope(callbackName, scope);
+
+        if (callbackVariable &amp;&amp; !hasHandledReferences(callbackVariable.references)) {
+            context.report(callback, 'Expected "function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>handle-done-callback" callback to be handled.', { name: callbackName });
+        }
+    }
+
+    function check(node) {
+        if (hasParentMochaFunctionCall(node) &amp;&amp; isAsyncFunction(node)) {
+            checkAsyncMochaFunction(node);
+        }
+    }
+
+    return {
+        FunctionExpression: check,
+        ArrowFunctionExpression: check
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.max-top-level-suites" id="apidoc.module.eslint-plugin-mocha.rules.max-top-level-suites">module eslint-plugin-mocha.rules.max-top-level-suites</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.max-top-level-suites.max-top-level-suites" id="apidoc.element.eslint-plugin-mocha.rules.max-top-level-suites.max-top-level-suites">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>max-top-level-suites
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">max-top-level-suites = function (context) {
+    var stack = [],
+        topLevelDescribes = [],
+        options = context.options[0] || {},
+        settings = context.settings,
+        suiteLimit;
+
+    if (R.isNil(options.limit)) {
+        suiteLimit = defaultSuiteLimit;
+    } else {
+        suiteLimit = options.limit;
+    }
+
+    return {
+        CallExpression: function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                stack.push(node);
+            }
+        },
+
+        'CallExpression:exit': function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                if (stack.length === 1) {
+                    topLevelDescribes.push(node);
+                }
+
+                stack.pop(node);
+            }
+        },
+
+        'Program:exit': function () {
+            if (topLevelDescribes.length &gt; suiteLimit) {
+                context.report({
+                    node: topLevelDescribes[suiteLimit],
+                    message: 'The number of top-level suites is more than ' + suiteLimit + '.'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-exclusive-tests" id="apidoc.module.eslint-plugin-mocha.rules.no-exclusive-tests">module eslint-plugin-mocha.rules.no-exclusive-tests</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-exclusive-tests.no-exclusive-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-exclusive-tests.no-exclusive-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-exclusive-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-exclusive-tests = function (context) {
+    var mochaTestFunctions = [
+            'it',
+            'describe',
+            'suite',
+            'test',
+            'context',
+            'specify'
+        ],
+        settings = context.settings,
+        additionalTestFunctions = getAdditionalTestFunctions(settings);
+
+    mochaTestFunctions = mochaTestFunctions.concat(additionalTestFunctions);
+
+    function matchesMochaTestFunction(object) {
+        var name = astUtils.getNodeName(object);
+
+        return mochaTestFunctions.indexOf(name) !== -1;
+    }
+
+    function isPropertyNamedOnly(property) {
+        return property &amp;&amp; astUtils.getPropertyName(property) === 'only';
+    }
+
+    function isCallToMochasOnlyFunction(callee) {
+        return callee.type === 'MemberExpression' &amp;&amp;
+            matchesMochaTestFunction(callee.object) &amp;&amp;
+            isPropertyNamedOnly(callee.property);
+    }
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee;
+
+            if (callee &amp;&amp; isCallToMochasOnlyFunction(callee)) {
+                context.report({
+                    node: callee.property,
+                    message: 'Unexpected exclusive mocha test.'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-global-tests" id="apidoc.module.eslint-plugin-mocha.rules.no-global-tests">module eslint-plugin-mocha.rules.no-global-tests</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-global-tests.no-global-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-global-tests.no-global-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-global-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-global-tests = function (context) {
+    var testFunctionNames = [
+            'it',
+            'it.only',
+            'it.skip',
+            'test',
+            'test.only',
+            'test.skip',
+            'specify',
+            'specify.only',
+            'specify.skip'
+        ];
+
+    function getFnName(callee) {
+        if (callee.type === 'MemberExpression') {
+            if (callee.computed) {
+                return callee.object.name + '.' + callee.property.value;
+            }
+
+            return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function isGlobalScope(scope) {
+        return scope.type === 'global' || scope.type === 'module';
+    }
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee,
+                fnName = getFnName(callee),
+                scope = context.getScope();
+
+            if (testFunctionNames.indexOf(fnName) !== -1 &amp;&amp; isGlobalScope(scope)) {
+                context.report(callee, 'Unexpected global mocha test.');
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-hooks" id="apidoc.module.eslint-plugin-mocha.rules.no-hooks">module eslint-plugin-mocha.rules.no-hooks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks.no-hooks" id="apidoc.element.eslint-plugin-mocha.rules.no-hooks.no-hooks">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-hooks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-hooks = function (context) {
+    return {
+        CallExpression: function (node) {
+            if (astUtil.isHookIdentifier(node.callee)) {
+                context.report({
+                    node: node.callee,
+                    message: 'Unexpected use of Mocha `' + node.callee.name + '` hook'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-hooks-for-single-case" id="apidoc.module.eslint-plugin-mocha.rules.no-hooks-for-single-case">module eslint-plugin-mocha.rules.no-hooks-for-single-case</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-hooks-for-single-case.no-hooks-for-single-case" id="apidoc.element.eslint-plugin-mocha.rules.no-hooks-for-single-case.no-hooks-for-single-case">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-hooks-for-single-case
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-hooks-for-single-case = function (context) {
+    var options = context.options[0] || {},
+        allowedHooks = options.allow || [],
+        settings = context.settings,
+        layers = [];
+
+    function popLayer(node) {
+        var layer = layers[layers.length - 1];
+        if (layer.describeNode === node) {
+            if (layer.testCount &lt;= 1) {
+                layer.hookNodes
+                    .filter(function (hookNode) {
+                        return allowedHooks.indexOf(hookNode.name) === -1;
+                    })
+                    .forEach(function (hookNode) {
+                        context.report({
+                            node: hookNode,
+                            message: 'Unexpected use of Mocha `' + hookNode.name + '` hook for a single test case'
+                        });
+                    });
+            }
+            layers.pop();
+        }
+    }
+
+    return {
+        Program: function (node) {
+            layers.push(newDescribeLayer(node));
+        },
+
+        CallExpression: function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                layers[layers.length - 1].testCount += 1;
+                layers.push(newDescribeLayer(node));
+                return;
+            }
+
+            if (astUtil.isTestCase(node)) {
+                layers[layers.length - 1].testCount += 1;
+            }
+
+            if (astUtil.isHookIdentifier(node.callee)) {
+                layers[layers.length - 1].hookNodes.push(node.callee);
+            }
+        },
+
+        'CallExpression:exit': popLayer,
+        'Program:exit': popLayer
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-identical-title" id="apidoc.module.eslint-plugin-mocha.rules.no-identical-title">module eslint-plugin-mocha.rules.no-identical-title</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-identical-title.no-identical-title" id="apidoc.element.eslint-plugin-mocha.rules.no-identical-title.no-identical-title">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-identical-title
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-identical-title = function (context) {
+    var titleLayers = [
+        newLayer()
+    ],
+    settings = context.settings;
+
+    return {
+        CallExpression: function (node) {
+            var currentLayer = titleLayers[titleLayers.length - 1],
+                title;
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                titleLayers.push(newLayer());
+            }
+            if (!isFirstArgLiteral(node)) {
+                return;
+            }
+
+            title = node.arguments[0].value;
+            handlTestCaseTitles(context, currentLayer.testTitles, node, title);
+            handlTestSuiteTitles(context, currentLayer.describeTitles, node, title);
+        },
+        'CallExpression:exit': function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                titleLayers.pop();
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-mocha-arrows" id="apidoc.module.eslint-plugin-mocha.rules.no-mocha-arrows">module eslint-plugin-mocha.rules.no-mocha-arrows</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-mocha-arrows.no-mocha-arrows" id="apidoc.element.eslint-plugin-mocha.rules.no-mocha-arrows.no-mocha-arrows">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-mocha-arrows
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-mocha-arrows = function (context) {
+    function getCalleeName(callee) {
+        if (callee.type === 'MemberExpression') {
+             return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function isLikelyMochaGlobal(scope, name) {
+        return !R.find(R.propEq('name', name), scope.variables);
+    }
+
+    function fixArrowFunction(fixer, fn) {
+        var sourceCode = context.getSourceCode(),
+            paramsLeftParen = sourceCode.getFirstToken(fn),
+            paramsRightParen = sourceCode.getTokenBefore(sourceCode.getTokenBefore(fn.body)),
+            paramsFullText =
+                sourceCode.text.slice(paramsLeftParen.range[0], paramsRightParen.range[1]),
+            functionKeyword = 'function',
+            bodyText;
+
+        if (fn.async) {
+            // When 'async' specified, take care about the keyword.
+            functionKeyword = 'async function';
+            // Strip 'async (...)' to ' (...)'
+            paramsFullText = paramsFullText.slice(5);
+        }
+
+        if (fn.params.length &gt; 0) {
+            paramsFullText = '(' + sourceCode.text.slice(fn.params[0].start, R.last(fn.params).end) + ')';
+        }
+
+        if (fn.body.type === 'BlockStatement') {
+            // When it((...) =&gt; { ... }),
+            // simply replace '(...) =&gt; ' with 'function () '
+            return fixer.replaceTextRange(
+                [ fn.start, fn.body.start ],
+                functionKeyword + paramsFullText + ' '
+            );
+        }
+
+        bodyText = sourceCode.text.slice(fn.body.range[0], fn.body.range[1]);
+        return fixer.replaceTextRange(
+            [ fn.start, fn.end ],
+            functionKeyword + paramsFullText + ' { return ' + bodyText + '; }'
+        );
+    }
+
+    return {
+        CallExpression: function (node) {
+            var name = getCalleeName(node.callee),
+                fnArg;
+
+            if (name &amp;&amp; mochaFunctionNames.indexOf(name) &gt; -1) {
+                fnArg = node.arguments.slice(-1)[0];
+                if (fnArg &amp;&amp; fnArg.type === 'ArrowFunctionExpression') {
+                    if (isLikelyMochaGlobal(context.getScope(), name)) {
+                        context.report({
+                            node: node,
+                            message: 'Do not pass arrow functions to ' + name + '()',
+                            fix: function (fixer) {
+                                return fixArrowFunction(fixer, fnArg);
+                            }
+                        });
+                    }
+                }
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-nested-tests" id="apidoc.module.eslint-plugin-mocha.rules.no-nested-tests">module eslint-plugin-mocha.rules.no-nested-tests</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-nested-tests.no-nested-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-nested-tests.no-nested-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-nested-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noNestedTests(context) {
+    var testNestingLevel = 0,
+        settings = context.settings;
+
+    function report(callExpression, isTestCase) {
+        var message = isTestCase ? 'Unexpected test nested within another test.' :
+            'Unexpected suite nested within a test.';
+
+        context.report({
+            message: message,
+            node: callExpression.callee
+        });
+    }
+
+    return {
+        CallExpression: function (node) {
+            var isTestCase = astUtils.isTestCase(node),
+                isDescribe = astUtils.isDescribe(node, additionalSuiteNames(settings));
+
+            if (testNestingLevel &gt; 0 &amp;&amp; (isTestCase || isDescribe)) {
+                report(node, isTestCase);
+            }
+
+            if (isTestCase) {
+                testNestingLevel += 1;
+            }
+        },
+
+        'CallExpression:exit': function (node) {
+            if (astUtils.isTestCase(node)) {
+                testNestingLevel -= 1;
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-pending-tests" id="apidoc.module.eslint-plugin-mocha.rules.no-pending-tests">module eslint-plugin-mocha.rules.no-pending-tests</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-pending-tests.no-pending-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-pending-tests.no-pending-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-pending-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-pending-tests = function (context) {
+    var mochaTestFunctionNames = [
+        'it',
+        'test',
+        'specify'
+    ];
+
+    function isMochaTest(callee) {
+        return callee.type === 'Identifier' &amp;&amp;
+            mochaTestFunctionNames.indexOf(callee.name) !== -1;
+    }
+
+    function isPendingMochaTest(node) {
+        return isMochaTest(node.callee) &amp;&amp;
+            node.arguments.length === 1 &amp;&amp;
+            node.arguments[0].type === 'Literal';
+    }
+
+    return {
+        CallExpression: function (node) {
+            if (node.callee &amp;&amp; isPendingMochaTest(node)) {
+                context.report({
+                    node: node,
+                    message: 'Unexpected pending mocha test.'
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-return-and-callback" id="apidoc.module.eslint-plugin-mocha.rules.no-return-and-callback">module eslint-plugin-mocha.rules.no-return-and-callback</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-return-and-callback.no-return-and-callback" id="apidoc.element.eslint-plugin-mocha.rules.no-return-and-callback.no-return-and-callback">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-return-and-callback
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-return-and-callback = function (context) {
+    function check(node) {
+        if (node.params.length === 0 || !hasParentMochaFunctionCall(node)) {
+            return;
+        }
+
+        if (!reportIfShortArrowFunction(context, node)) {
+            reportIfFunctionWithBlock(context, node, node.params[0].name);
+        }
+    }
+
+    return {
+        FunctionExpression: check,
+        ArrowFunctionExpression: check
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-sibling-hooks" id="apidoc.module.eslint-plugin-mocha.rules.no-sibling-hooks">module eslint-plugin-mocha.rules.no-sibling-hooks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-sibling-hooks.no-sibling-hooks" id="apidoc.element.eslint-plugin-mocha.rules.no-sibling-hooks.no-sibling-hooks">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-sibling-hooks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-sibling-hooks = function (context) {
+    var isUsed = [],
+        settings = context.settings;
+
+    return {
+        Program: function (node) {
+            isUsed.push(newDescribeLayer(node));
+        },
+
+        CallExpression: function (node) {
+            var name = node.callee &amp;&amp; node.callee.name;
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+              isUsed.push(newDescribeLayer(node));
+              return;
+            }
+
+            if (!astUtil.isHookIdentifier(node.callee)) {
+              return;
+            }
+
+            if (isUsed[isUsed.length - 1][name]) {
+                context.report({
+                    node: node.callee,
+                    message: 'Unexpected use of duplicate Mocha `' + name + '` hook'
+                });
+            }
+
+            isUsed[isUsed.length - 1][name] = true;
+        },
+
+        'CallExpression:exit': function (node) {
+            if (isUsed[isUsed.length - 1].describeNode === node) {
+              isUsed.pop();
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-skipped-tests" id="apidoc.module.eslint-plugin-mocha.rules.no-skipped-tests">module eslint-plugin-mocha.rules.no-skipped-tests</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-skipped-tests.no-skipped-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-skipped-tests.no-skipped-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-skipped-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-skipped-tests = function (context) {
+    var settings = context.settings,
+        additionalTestFunctions = getAdditionalTestFunctions(settings),
+        additionalXFunctions = getAdditionalXFunctions(settings);
+
+    mochaTestFunctions = [
+        'it',
+        'describe',
+        'suite',
+        'test',
+        'context',
+        'specify'
+    ].concat(additionalTestFunctions);
+    mochaXFunctions = [
+        'xit',
+        'xdescribe',
+        'xcontext',
+        'xspecify'
+    ].concat(additionalXFunctions);
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee;
+
+            if (callee &amp;&amp; isCallToMochasSkipFunction(callee)) {
+                context.report({
+                    node: callee.property,
+                    message: 'Unexpected skipped mocha test.',
+                    fix: createSkipAutofixFunction(callee)
+                });
+            } else if (callee &amp;&amp; isCallToMochaXFunction(callee)) {
+                context.report({
+                    node: callee,
+                    message: 'Unexpected skipped mocha test.',
+                    fix: createXAutofixFunction(callee)
+                });
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-synchronous-tests" id="apidoc.module.eslint-plugin-mocha.rules.no-synchronous-tests">module eslint-plugin-mocha.rules.no-synchronous-tests</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-synchronous-tests.no-synchronous-tests" id="apidoc.element.eslint-plugin-mocha.rules.no-synchronous-tests.no-synchronous-tests">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-synchronous-tests
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-synchronous-tests = function (context) {
+    var possibleAsyncFunctionNames = [
+        'it',
+        'it.only',
+        'test',
+        'test.only',
+        'specify',
+        'specify.only',
+        'before',
+        'after',
+        'beforeEach',
+        'afterEach'
+    ];
+
+    function getCalleeName(callee) {
+        if (callee.type === 'MemberExpression') {
+             return callee.object.name + '.' + callee.property.name;
+        }
+
+        return callee.name;
+    }
+
+    function hasParentMochaFunctionCall(functionExpression) {
+        var name;
+
+        if (functionExpression.parent &amp;&amp; functionExpression.parent.type === 'CallExpression') {
+            name = getCalleeName(functionExpression.parent.callee);
+            return possibleAsyncFunctionNames.indexOf(name) &gt; -1;
+        }
+
+        return false;
+    }
+
+    function hasAsyncCallback(functionExpression) {
+        return functionExpression.params.length === 1;
+    }
+
+    function findPromiseReturnStatement(nodes) {
+      return R.find(function (node) {
+        return node.type === 'ReturnStatement' &amp;&amp; node.argument &amp;&amp; node.argument.type !== 'Literal';
+      }, nodes);
+    }
+
+    function checkPromiseReturn(functionExpression) {
+        var bodyStatement = functionExpression.body,
+            returnStatement = null;
+
+        if (bodyStatement.type === 'BlockStatement') {
+            returnStatement = findPromiseReturnStatement(functionExpression.body.body);
+        } else if (bodyStatement.type === 'CallExpression') {
+            //  allow arrow statements calling a promise with implicit return.
+            returnStatement = bodyStatement;
+        }
+
+        if (!returnStatement) {
+            context.report(functionExpression, 'Unexpected synchronous test.');
+        }
+    }
+
+    function check(node) {
+        if (hasParentMochaFunctionCall(node) &amp;&amp; !hasAsyncCallback(node)) {
+            checkPromiseReturn(node);
+        }
+    }
+
+    return {
+        FunctionExpression: check,
+        ArrowFunctionExpression: check
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.no-top-level-hooks" id="apidoc.module.eslint-plugin-mocha.rules.no-top-level-hooks">module eslint-plugin-mocha.rules.no-top-level-hooks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.no-top-level-hooks.no-top-level-hooks" id="apidoc.element.eslint-plugin-mocha.rules.no-top-level-hooks.no-top-level-hooks">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>no-top-level-hooks
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-top-level-hooks = function (context) {
+    var settings = context.settings,
+        testSuiteStack = [];
+
+    return {
+        CallExpression: function (node) {
+            if (astUtil.isDescribe(node, additionalSuiteNames(settings))) {
+                testSuiteStack.push(node);
+                return;
+            }
+
+            if (!astUtil.isHookIdentifier(node.callee)) {
+              return;
+            }
+
+            if (testSuiteStack.length === 0) {
+                context.report({
+                    node: node.callee,
+                    message: 'Unexpected use of Mocha `' + node.callee.name + '` hook outside of a test suite'
+                });
+            }
+        },
+
+        'CallExpression:exit': function (node) {
+            if (testSuiteStack[testSuiteStack.length - 1] === node) {
+                testSuiteStack.pop();
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.valid-suite-description" id="apidoc.module.eslint-plugin-mocha.rules.valid-suite-description">module eslint-plugin-mocha.rules.valid-suite-description</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.valid-suite-description.valid-suite-description" id="apidoc.element.eslint-plugin-mocha.rules.valid-suite-description.valid-suite-description">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>valid-suite-description
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">valid-suite-description = function (context) {
+    var pattern = new RegExp(context.options[0]),
+        suiteNames = context.options[1] ? context.options[1] : defaultSuiteNames;
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee,
+                args;
+
+            if (callee &amp;&amp; callee.name &amp;&amp; suiteNames.indexOf(callee.name) &gt; -1) {
+                args = node.arguments;
+                if (args &amp;&amp; args[0] &amp;&amp; typeof args[0].value === 'string' &amp;&amp; !pattern.test(args[0].value)) {
+                    context.report(node, 'Invalid "' + callee.name + '()" description found.');
+                }
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-mocha.rules.valid-test-description" id="apidoc.module.eslint-plugin-mocha.rules.valid-test-description">module eslint-plugin-mocha.rules.valid-test-description</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-mocha.rules.valid-test-description.valid-test-description" id="apidoc.element.eslint-plugin-mocha.rules.valid-test-description.valid-test-description">
+        function <span class="apidocSignatureSpan">eslint-plugin-mocha.rules.</span>valid-test-description
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">valid-test-description = function (context) {
+    var pattern = context.options[0] ? new RegExp(context.options[0]) : /^should/,
+        testNames = context.options[1] ? context.options[1] : defaultTestNames;
+
+    return {
+        CallExpression: function (node) {
+            var callee = node.callee,
+                args;
+
+            if (callee &amp;&amp; callee.name &amp;&amp; testNames.indexOf(callee.name) &gt; -1) {
+                args = node.arguments;
+                if (args &amp;&amp; args[0] &amp;&amp; typeof args[0].value === 'string' &amp;&amp; !pattern.test(args[0].value)) {
+                    context.report(node, 'Invalid "' + callee.name + '()" description found.');
+                }
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
