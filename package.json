@@ -1,1 +1,39 @@
-{     "devDependencies": {         "eslint-plugin-mocha": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-eslint-plugin-mocha",     "homepage": "https://github.com/npmdoc/node-npmdoc-eslint-plugin-mocha",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-eslint-plugin-mocha.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "api documentation for [eslint-plugin-mocha (v4.9.0)](https://github.com/lo1tuma/eslint-plugin-mocha) [![npm package](https://img.shields.io/npm/v/npmdoc-eslint-plugin-mocha.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eslint-plugin-mocha) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-mocha.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-mocha)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "eslint-plugin-mocha": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-eslint-plugin-mocha",
+    "keywords": [
+        "documentation",
+        "eslint-plugin-mocha"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_eslint_plugin_mocha.js",
+    "name": "npmdoc-eslint-plugin-mocha",
+    "nameAlias": "npmdoc_eslint_plugin_mocha",
+    "nameOriginal": "npmdoc-eslint-plugin-mocha",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-eslint-plugin-mocha.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
