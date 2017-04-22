@@ -1,4 +1,7 @@
-# api documentation for  [eslint-plugin-mocha (v4.9.0)](https://github.com/lo1tuma/eslint-plugin-mocha)  [![npm package](https://img.shields.io/npm/v/npmdoc-eslint-plugin-mocha.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eslint-plugin-mocha) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-mocha.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-mocha)
+# npmdoc-eslint-plugin-mocha
+
+#### api documentation for  [eslint-plugin-mocha (v4.9.0)](https://github.com/lo1tuma/eslint-plugin-mocha)  [![npm package](https://img.shields.io/npm/v/npmdoc-eslint-plugin-mocha.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eslint-plugin-mocha) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-mocha.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-mocha)
+
 #### Eslint rules for mocha.
 
 [![NPM](https://nodei.co/npm/eslint-plugin-mocha.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/eslint-plugin-mocha)
@@ -84,7 +87,8 @@
         "test": "npm run test:unit --coverage && npm run check-coverage",
         "test:unit": "istanbul test _mocha test -- --recursive --reporter dot"
     },
-    "version": "4.9.0"
+    "version": "4.9.0",
+    "bin": {}
 }
 ```
 
